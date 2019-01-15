@@ -1,0 +1,36 @@
+<div class="row">
+			<br>
+
+			<!-- <div class="col-lg-4"></div> -->
+			<div class="col-lg-8 offset-2">
+				<table class="table table-borderless table-dark">
+				  <thead>
+				    <tr>
+				      <th scope="row" colspan="2" class="text-center text-danger"><b>Authorization</b></th>
+				      <!-- <td>Mark</td> -->
+				      <!--  <td>Otto</td> -->
+				      <td colspan="2" class="text-center text-danger"><b>Bearer + Token</b></td>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row" colspan="2" class="text-center">(URL) DU SERVEUR</th>
+				      <!-- <td>Mark</td> -->
+				      <!--  <td>Otto</td> -->
+				      <td colspan="2" class="text-center">http://AdresseIp/master</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">2</th>
+				      <td>Jacob</td>
+				      <td>Thornton</td>
+				      <td>@fat</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">3</th>
+				      <td colspan="2">Larry the Bird</td>
+				      <td>@twitter</td>
+				    </tr>
+				  </tbody>
+				</table>
+			</div>
+		</div>
