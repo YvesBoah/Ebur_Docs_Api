@@ -9,7 +9,7 @@
 
         <div class="row">
 	       <div class="col-lg-12">
-	      		<h1 class="text-center text-muted"> Consultation du solde d'un client</h1>
+	      		<h1 class="text-center text-muted"> Consultation de facture client</h1>
 	       </div>
 	    </div>
 	
@@ -26,7 +26,7 @@
 <div class="container-fluid">
 	<br>
 	<div class="row">
-		<div class="col-lg-12 text-center text-muted"><h2> Consulter un solde client </h2> </div>
+		<div class="col-lg-12 text-center text-muted"><h2> Consulter toutes les factures <b>d'un client</b> </h2> </div>
 	</div>
 
 	<br>
@@ -49,19 +49,16 @@
 					      <div class="tab-pane fade text-center text-muted" id="list-profiles" role="tabpanel" aria-labelledby="list-profile-list">
 					      	<b>ETAPE</b>
 					      	<ol>
-					      		
-					      	<li>Renseigner le nom du service se présentant sous cette forme : <br>
-								<b>"name" = "SoldeClient". </b>
-					      	</li>
-					      	<li>
+					      	<li>Renseigner le nom du service se présentant sous cette forme : <br>Exemple : <b> "name" = "FacturesClient"</b></li> 	
+					      <li>
 					      		Renseigner l'adresse du serveur Exemple : <b>http://AdresseIpSERVEUR/master/</b>
 					      	</li>
 					      	<li>
 					      		Passer en paramètres ces identifiants. Puis lancer la requête.
 					      	</li>
 					      </ol>
-					  </div>
-					    <div class="tab-pane fade text-center text-muted" id="list-messagess" role="tabpanel" aria-labelledby="list-messages-list">
+					 	 </div>
+					 	 <div class="tab-pane fade text-center text-muted" id="list-messagess" role="tabpanel" aria-labelledby="list-messages-list">
 					      	<b>Message de retour</b>
 					      	<br>
 					      	<br>
@@ -71,22 +68,63 @@
 									    "Response": {
 									        "status": {
 									            "status": 200,
+									            "message": "Voici les factures du client ALI HIMIDI",
 									            "success": true,
-									            "message": "Voici le solde facture du client ALI HIMIDI"
+									            "resultat": {
+									                "Nombre_fact": 2
+									            }
 									        },
-									        "resultat": {
-									            "SoldeClient": "83748.0000000000",
-									            "NomClient": "ALI HIMIDI",
-									            "NumeroAbonne": "63433"
-									        }
+									        "resultat": [
+									            
+									            {
+									                "IRO_EXERCICE": "2018",
+									                "IRO_NUMERO": "9968",
+									                "IRO_NUMERODANSROLE": "1682",
+									                "DET_REFDETTE": "6343318901682",
+									                "DET_DATEEMISSION": "2018-10-22",
+									                "DET_RESTANTDU": "9409.0000000000",
+									                "DET_CODEMONNAIE": "2",
+									                "DET_DATEMISEAJOUR": "2019-01-15 00:00:00",
+									                "DET_REFBORD": null,
+									                "DET_REFABN": "63433",
+									                "DET_MNTTC": "9409.0000000000",
+									                "DET_REFPAYEUR": "63433",
+									                "DET_NOMPAYEUR": "ALI HIMIDI",
+									                "DET_NUMCPT": "EA29536908600133",
+									                "DET_INSID": "30331",
+									                "DET_ADRESSE": null,
+									                "CLI_ID": "63433",
+									                "DET_COMMENT": null
+									            },
+									            {
+									                "IRO_EXERCICE": "2018",
+									                "IRO_NUMERO": "9896",
+									                "IRO_NUMERODANSROLE": "3",
+									                "DET_REFDETTE": "6343318900003",
+									                "DET_DATEEMISSION": "2018-04-25",
+									                "DET_RESTANTDU": "42645.0000000000",
+									                "DET_CODEMONNAIE": "2",
+									                "DET_DATEMISEAJOUR": "2019-01-15 00:00:00",
+									                "DET_REFBORD": null,
+									                "DET_REFABN": "63433",
+									                "DET_MNTTC": "92253.0000000000",
+									                "DET_REFPAYEUR": "63433",
+									                "DET_NOMPAYEUR": "ALI HIMIDI",
+									                "DET_NUMCPT": "EA29536908600133",
+									                "DET_INSID": "30331",
+									                "DET_ADRESSE": null,
+									                "CLI_ID": "63433",
+									                "DET_COMMENT": null
+									            }
+									        ]
 									    }
 									}
-					      		</li>
+														      		</li>
 					      		<li class="text-danger">
 									{
 									    "Response": {
 									        "status": 102,
-									        "resultat": "Aucun solde client trouvé"
+									        "resultat": "Aucunes factures clients trouvées"
 									    }
 									}
 					      		</li>
@@ -120,7 +158,7 @@
 				      <th scope="row" colspan="2" class="text-center">(URL) DU SERVEUR</th>
 				      <!-- <td>Mark</td> -->
 				      <!--  <td>Otto</td> -->
-				      <td colspan="2" class="text-center">http://AdresseIpSERVEUR/master</td>
+				      <td colspan="2" class="text-center">http://AdresseIp/master</td>
 				    </tr>
 				  </thead>
 				  <tbody>
@@ -134,9 +172,20 @@
 				      <th scope="row" colspan="2" class="text-center text-muted">name</th>
 				      <!-- <td>Mark</td> -->
 				      <!--  <td>Otto</td> -->
-				      <td colspan="2" class="text-center text-muted">SoldeClient</td>
+				      <td colspan="2" class="text-center text-muted">FacturesClient</td>
 				    </tr>
-				
+					<tr>
+				      <th scope="row" colspan="4" class="text-center text-muted">param</th>
+				      <!-- <td>Mark</td> -->
+				      <!--  <td>Otto</td> -->
+				      <!-- <td colspan="2" class="text-center text-muted">Secure_Key_Token</td> -->
+				    </tr>
+				     <tr>
+				      <th scope="row" colspan="2" class="text-center text-muted">DET_REFDETTE</th>
+				      <!-- <td>Mark</td> -->
+				      <!--  <td>Otto</td> -->
+				      <td colspan="2" class="text-center text-muted">4318711311325</td>
+				    </tr>
 				     
 				    
 				    <!-- Button trigger modal -->
@@ -156,7 +205,7 @@
   <div class="modal-dialog modal-xl">
      <div class="container-fluid">
 	    <div class="modal-content">
-	     	 <img src="images/apercu/solde.png" height="500" width="100%" alt="Token">
+	     	 <img src="images/apercu/fact_client.png" height="500" width="100%" alt="Token">
 	     <br>
 		    <div class="col-lg-5 offset-5">
 		        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Fermer</button>

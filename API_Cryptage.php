@@ -91,7 +91,7 @@
 								<b>"name" = "Secure_Key_Token". </b>
 					      	</li>
 					      	<li>
-					      		Renseigner l'adresse du serveur Exemple : <b>http://localhost/master/</b>
+					      		Renseigner l'adresse du serveur Exemple : <b>http://AdresseIpSERVEUR/master/</b>
 					      	</li>
 					      	<li>
 					      		Passer en paramètres ces identifiants. Puis lancer la requête.
@@ -148,7 +148,7 @@
 				      <th scope="row" colspan="2" class="text-center">(URL) DU SERVEUR</th>
 				      <!-- <td>Mark</td> -->
 				      <!--  <td>Otto</td> -->
-				      <td colspan="2" class="text-center">http://AdresseIp/master</td>
+				      <td colspan="2" class="text-center">http://AdresseIpSERVEUR/master</td>
 				    </tr>
 				  </thead>
 				  <tbody>
